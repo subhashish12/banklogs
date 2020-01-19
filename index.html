@@ -1,50 +1,89 @@
 <html>
-  <head>
 
-    <title>
-      Bank Logs
-    </title>
-  </head>
-  <style>
-    body{
-      background: black;
-      color: chartreuse;
-    }
-    h1{
-      text-align: center;
-      font-family: monospace;
-    }
-    #main{
-      border: solid 1px;
-      margin-top: 11%;
-      color: white;
-      border: 1px solid chartreuse;
-      padding: 2%;
-    }
-    .transactions{
-      display: inline;
-      margin-left: 3%;
-    }
-    .inputbox{
-      
-    }
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+  body {
+    background: black;
+    color: chartreuse;
+  }
 
-  </style>
-  <body > 
-      <h1>Account History</h1>
-      <div id="main">
-        <h2>Current Balance: <span> 12</span> </h2>
-        <div class="inputbox">
-          <div class="transactions">
-            <input type="number" placeholder="Enter Amount" name="deposit">
-            <button>Withdraw</button>
-          </div>
-          <div class="transactions">
-            <input type="number" placeholder="Enter Amount" name="deposit">
-            <button>Deposit</button>
-          </div>
+  h1 {
+    text-align: center;
+    font-family: monospace;
+  }
+
+  #main {
+    border: solid 1px;
+    margin-top: 11%;
+    color: white;
+    border: 1px solid chartreuse;
+    padding: 2%;
+  }
+
+  .transactions {
+    display: inline;
+    margin-left: 3%;
+  }
+  table{
+    background: black;
+    color: #2aff2a;
+  }
+</style>
+
+<body>
+  <h1>Account History</h1>
+  <div id="main" class="row">
+    <div class="col-md-12">
+      <h3>Current Balance: <span id="bal"></span></h3>
+    </div>
+    <div class="col-md-6 mt-4 mb-4">
+      <div class="input-group w-50">
+        <input type="text" class="form-control" placeholder="Enter the amount to Deposit" id="depositAmt">
+        <div class="input-group-append">
+          <span class="btn btn-warning" id="Deposit">Deposit</span>
         </div>
-
       </div>
-  </body> 
+    </div>
+    <div class="col-md-6 mt-4 mb-4">
+      <div class="input-group w-50">
+        <input type="text" class="form-control" placeholder="Enter the amount to withdraw" id="withdrawAmt">
+        <div class="input-group-append">
+          <span class="btn btn-danger" id="withdraw">Withdraw</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Narration</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Standing Balance</th>
+          </tr>
+        </thead>
+        <tbody id="tBody">
+         
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="./scripts/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
