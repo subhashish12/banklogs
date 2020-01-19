@@ -64,7 +64,7 @@ const updateBal = ()=>{
 
 //initializing
 
-let totalAmt = 100;
+let totalAmt = 0;
 let fourPercent = (4/100);
 document.getElementById("bal").innerHTML = totalAmt;
 let depositBtn =  document.getElementById("Deposit");
