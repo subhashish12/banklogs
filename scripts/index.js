@@ -75,4 +75,4 @@ withdrawBtn.addEventListener("click", withdraw)
 //timer for 30 sec
 setInterval(()=>{ 
   if(totalAmt >= 1) updateBal();
-},3000);
+},30000);
